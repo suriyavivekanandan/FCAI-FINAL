@@ -44,6 +44,12 @@ function Navbar() {
               Data
             </Link>
             <Link
+  to="/analysis"
+  className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/analysis')}`}
+>
+  Analysis
+</Link>
+            <Link
               to="/bookings"
               className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/bookings')}`}
             >

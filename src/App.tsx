@@ -6,6 +6,7 @@ import InitialEntry from './pages/InitialEntry';
 import RemainingEntry from './pages/RemainingEntry';
 import DataView from './pages/DataView';
 import Bookings from './pages/Bookings';
+import FoodAnalysis from './pages/FoodAnalysis'; // Add this import
 import { signInAnonymously } from './lib/supabase';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/remaining-entry" element={<RemainingEntry />} />
             <Route path="/data" element={<DataView />} />
             <Route path="/bookings" element={<Bookings />} />
+            <Route path="/analysis" element={<FoodAnalysis />} />
           </Routes>
         </main>
       </div>
