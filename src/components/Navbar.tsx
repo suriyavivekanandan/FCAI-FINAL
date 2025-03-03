@@ -6,62 +6,54 @@ function Navbar() {
   const location = useLocation();
   
   const isActive = (path: string) => {
-    return location.pathname === path ? 'bg-blue-700' : '';
+    return location.pathname === path ? 'bg-green-700' : '';
   };
 
   return (
-    <nav className="bg-blue-600 text-white shadow-lg">
+    <nav className="bg-green-600 text-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Utensils className="h-6 w-6" />
-            <span className="font-bold text-xl">Food Waste Management</span>
+            <span className="font-bold text-lg">Food Waste Management</span>
           </Link>
           
           <div className="flex space-x-4">
             <Link
               to="/"
-              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/')}`}
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 ${isActive('/')}`}
             >
               Home
             </Link>
             <Link
-              to="/initial-entry"
-              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/initial-entry')}`}
+              to="/initial-weight"
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 ${isActive('/initial-weight')}`}
             >
-              Initial Entry
+              Initial Weight
             </Link>
             <Link
-              to="/remaining-entry"
-              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/remaining-entry')}`}
+              to="/remaining-weight"
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 ${isActive('/remaining-weight')}`}
             >
-              Remaining Entry
+              Remaining Weight
             </Link>
             <Link
               to="/data"
-              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/data')}`}
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 ${isActive('/data')}`}
             >
               Data
             </Link>
             <Link
-  to="/analysis"
-  className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/analysis')}`}
->
-  Analysis
-</Link>
-            <Link
-              to="/bookings"
-              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 ${isActive('/bookings')}`}
+              to="/booking"
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 ${isActive('/booking')}`}
             >
-              Bookings
+              Booking
             </Link>
           </div>
         </div>
       </div>
     </nav>
   );
-
-  
 }
 
 export default Navbar;
